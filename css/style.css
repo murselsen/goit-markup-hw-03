@@ -183,27 +183,36 @@ section .section-title {
   flex-direction: row;
   gap: 24px;
 }
+
+.container .section-list .section-item {
+  background-color: #ffffff;
+}
+
 .container .section-list .section-item .section-content {
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+.container .section-list .section-item .title,
 .container .section-list .section-item .section-content .title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-transform: capitalize;
 }
+.container .section-list .section-item .description,
 .container .section-list .section-item .section-content .description {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
+/* Features */
+
 /* Team */
 .team {
   background-color: #f4f4fd;
