@@ -2,10 +2,26 @@ body {
   font-family: Roboto, sans-serif;
   background-color: #ffffff;
   color: #434455;
+  margin: 0;
+  padding: 0;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 ul {
   list-style-type: none;
+}
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 section .section-title {
   font-size: 36px;
@@ -14,6 +30,27 @@ section .section-title {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+}
+
+.container {
+  width: 1158px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 72px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.page-header .container {
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .logo {
@@ -31,6 +68,21 @@ section .section-title {
   color: #2e2f42;
 }
 
+.nav-menu,
+.nav-list,
+.address-menu,
+.address-list {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  margin-left: 30px;
+}
+
+.nav-list,
+.address-list {
+  gap: 40px;
+}
 .nav-list li {
   color: #2e2f42;
 }
@@ -72,16 +124,37 @@ section .section-title {
   background-color: #2e2f42;
   color: #ffffff;
   text-align: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+/* Effective Solutions for Your Business*/
 .hero .title {
+  margin: 0;
   font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 107.143% */
+  letter-spacing: 1.12px;
+  width: 556px;
+  height: 120px;
 }
 .hero .btn {
   border-radius: 4px;
+  padding-inline: 32px;
+  padding-block: 16px;
   background-color: #4d5ae5;
+  text-transform: capitalize;
   color: #ffffff;
+  box-shadow: 0px 4px 4px 0px #00000026;
   line-height: 1.5;
   letter-spacing: 0.04em;
   font-weight: 500;
@@ -91,6 +164,9 @@ section .section-title {
 .hero .btn:hover,
 .hero .btn:focus {
   background-color: #404bbf;
+}
+
+.features {
 }
 
 .features .feature-list .title {
