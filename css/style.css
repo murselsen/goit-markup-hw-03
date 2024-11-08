@@ -58,22 +58,26 @@ ul {
   margin-left: 76px;
 }
 
-.nav-list,
-.address-list {
-  gap: 40px;
-}
-.address-list li,
-.nav-list li {
+.address-list .address-item,
+.nav-list .nav-item {
   display: inline;
-  margin-left: 40px;
+  margin-right: 40px;
 }
-.nav-list .nav-link {
+.nav-list .nav-item .nav-link {
+  padding-bottom: 24px;
   color: #2e2f42;
 }
 .nav-list .nav-link:hover,
 .nav-list .nav-link:focus {
   color: #404bbf;
+  padding-bottom: 28px;
 }
+.nav-list .nav-item .nav-link.active > .nav-list .nav-item {
+  border-bottom: 4px solid #404bbf;
+  padding-bottom: 20px;
+  border-radius: 2px;
+}
+
 .nav-list .nav-link {
   color: inherit;
   text-decoration: none;
