@@ -19,11 +19,13 @@ ul {
 ul {
   list-style-type: none;
 }
+img {
+  display: block;
+}
 
 .page-header {
   height: 72px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+
   box-sizing: border-box;
   border-bottom: 1px solid #e7e9fc;
 }
@@ -43,6 +45,7 @@ ul {
   text-decoration: none;
   color: #4d5ae5;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 .logo .logo-span {
   color: #2e2f42;
@@ -54,14 +57,15 @@ ul {
   display: flex;
   align-items: center;
 }
-.nav-list {
-  margin-left: 76px;
-}
 
-.address-list .address-item,
+.address-list,
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
 .nav-list .nav-item {
-  display: inline;
-  margin-right: 40px;
+  padding: 24px 0;
 }
 .nav-list .nav-item .nav-link {
   padding-bottom: 24px;
@@ -132,13 +136,13 @@ ul {
   font-weight: 700;
   line-height: 60px; /* 107.143% */
   letter-spacing: 1.12px;
-  width: 556px;
-  height: 120px;
+  max-width: 496px;
 }
 .hero .btn {
   border-radius: 4px;
-  padding-inline: 32px;
-  padding-block: 16px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
   background-color: #4d5ae5;
   text-transform: capitalize;
   color: #ffffff;
@@ -169,6 +173,11 @@ section .section-title {
   margin-bottom: 72px;
 }
 
+section .section-title.visually-hidden {
+  /* visibility: hidden; */
+  display: none;
+}
+
 .container {
   width: 1158px;
   background-color: transparent;
@@ -176,6 +185,7 @@ section .section-title {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  padding: 0 15px;
 }
 .container .section-lists {
   display: flex;
@@ -185,11 +195,13 @@ section .section-title {
 .container .section-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
 .container .section-list .section-item {
   background-color: #ffffff;
+  width: calc((100% - 72px) / 4);
 }
 
 .container .section-list .section-item .section-content {
@@ -197,7 +209,6 @@ section .section-title {
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 .container .section-list .section-item .title,
 .container .section-list .section-item .section-content .title {
@@ -207,6 +218,8 @@ section .section-title {
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 8px;
+  /* text-align: center; */
 }
 .container .section-list .section-item .description,
 .container .section-list .section-item .section-content .description {
@@ -214,6 +227,7 @@ section .section-title {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  /* text-align: center; */
 }
 /* Features */
 
@@ -221,7 +235,12 @@ section .section-title {
 .team {
   background-color: #f4f4fd;
 }
-
+.team .container .section-list .section-item {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
 .team .container .section-list .section-item .section-content {
   align-items: center;
 }
@@ -234,6 +253,10 @@ section .section-title {
 .portfolio .container .section-list .section-item .section-content {
   padding-left: 16px;
   padding-right: 16px;
+}
+.container .section-list .section-item .section-content .title,
+.container .section-list .section-item .section-content .description {
+  text-align: center;
 }
 
 /* Footer */
