@@ -19,31 +19,11 @@ ul {
 ul {
   list-style-type: none;
 }
-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-section .section-title {
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-  color: #2e2f42;
-}
-
-.container {
-  width: 1158px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .page-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   height: 72px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   box-sizing: border-box;
   border-bottom: 1px solid #e7e9fc;
 }
@@ -68,26 +48,30 @@ section .section-title {
   color: #2e2f42;
 }
 
-.nav-menu,
-.nav-list,
-.address-menu,
-.address-list {
+/* * Nav Menu */
+
+.nav-menu {
   display: flex;
   align-items: center;
 }
 .nav-list {
-  margin-left: 30px;
+  margin-left: 76px;
 }
 
 .nav-list,
 .address-list {
   gap: 40px;
 }
+.address-list li,
 .nav-list li {
+  display: inline;
+  margin-left: 40px;
+}
+.nav-list .nav-link {
   color: #2e2f42;
 }
-.nav-list a:hover,
-.nav-list a:focus {
+.nav-list .nav-link:hover,
+.nav-list .nav-link:focus {
   color: #404bbf;
 }
 .nav-list .nav-link {
@@ -99,6 +83,9 @@ section .section-title {
   letter-spacing: 0.02em;
   text-align: left;
 }
+
+/* * Address Menu */
+
 .address-menu {
   font-style: normal;
 }
@@ -119,20 +106,17 @@ section .section-title {
   text-align: left;
 }
 
+/* Main */
 /* Hero */
 .hero {
+  height: 600px;
   background-color: #2e2f42;
   color: #ffffff;
+  padding-top: 188px;
+  padding-bottom: 188px;
   text-align: center;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 48px;
 }
@@ -165,65 +149,98 @@ section .section-title {
 .hero .btn:focus {
   background-color: #404bbf;
 }
+/* * All Section Style */
 
-.features {
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
-
-.features .feature-list .title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-.features .feature-list .description {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.team {
-  background-color: #f4f4fd;
-}
-.team .section-title {
+section .section-title {
   font-size: 36px;
   line-height: 1.11;
+  letter-spacing: 0.02em;
   text-align: center;
-}
-.team .team-list .team-item {
-  background-color: #ffffff;
-}
-.team .team-list .team-item .name {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: #2e2f42;
-}
-.team .team-list .team-item .departman {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  margin-bottom: 72px;
 }
 
-.portfolio .portfolio-list .title {
+.container {
+  width: 1158px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.container .section-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.container .section-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.container .section-list .section-item .section-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container .section-list .section-item .section-content .title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
-.portfolio .portfolio-list .sub-title {
+.container .section-list .section-item .section-content .description {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
+/* Team */
+.team {
+  background-color: #f4f4fd;
+}
+
+.team .container .section-list .section-item .section-content {
+  align-items: center;
+}
+
+/* Portfolio */
+
+.portfolio .container .section-list .section-item {
+  border: 1px solid #e7e9fc;
+}
+.portfolio .container .section-list .section-item .section-content {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Footer */
 footer {
   background-color: #2e2f42;
   color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+footer .container {
+  align-items: start;
+}
+footer .page-detail {
+  width: 264px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 footer .logo .logo-span {
-  color: #2e2f42;
+  color: #fff;
 }
 footer .detail {
   line-height: 1.5;
