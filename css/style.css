@@ -169,7 +169,7 @@ section .section-title {
 }
 
 section .section-title.visually-hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .container {
