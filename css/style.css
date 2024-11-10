@@ -65,7 +65,9 @@ img {
   gap: 40px;
 }
 .nav-list .nav-item {
-  padding: 24px 0;
+  /* padding: 24px 0; */
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .nav-list .nav-item .nav-link {
   color: #2e2f42;
@@ -141,6 +143,8 @@ img {
   margin-right: auto;
 }
 .hero .btn {
+  display: block;
+  margin: 0 auto;
   border-radius: 4px;
   min-width: 169px;
   height: 56px;
@@ -176,16 +180,7 @@ section .section-title {
 }
 
 .visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  display: none;
 }
 
 .container {
