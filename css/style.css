@@ -32,7 +32,7 @@ img {
 }
 
 .page-header .container {
-  flex-direction: row;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -62,7 +62,6 @@ img {
 .address-list,
 .nav-list {
   display: flex;
-  flex-direction: row;
   gap: 40px;
 }
 .nav-list .nav-item {
@@ -91,6 +90,11 @@ img {
 
 .address-menu {
   font-style: normal;
+  margin-left: auto;
+}
+
+.address-list .address-item {
+  padding: 24px 0;
 }
 .address-list .address-link {
   color: #434455;
@@ -125,13 +129,16 @@ img {
 }
 /* Effective Solutions for Your Business*/
 .hero .title {
-  margin: 0;
+  margin-bottom: 48px;
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 60px; /* 107.143% */
   letter-spacing: 1.12px;
+  text-align: center;
   max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero .btn {
   border-radius: 4px;
@@ -168,27 +175,28 @@ section .section-title {
   margin-bottom: 72px;
 }
 
-section .section-title.visually-hidden {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .container {
-  width: 1158px;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
+  width: 1158px;
+  margin: 0 auto;
   padding: 0 15px;
 }
-.container .section-lists {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
+
 .container .section-list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
 }
@@ -273,9 +281,7 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-footer .container {
-  align-items: start;
-}
+
 footer .logo {
   display: inline-block;
   margin-bottom: 16px;
